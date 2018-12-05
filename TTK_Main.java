@@ -57,15 +57,15 @@ public class TTK_Main{
         String choice = scan.nextLine();
 
         switch(choice){
-          case "Y";
+          case "Y":
             System.out.println("You are now logged out from the system.");
             return null;
 
-          case "N";
+          case "N":
             System.out.println("You are still logged on to the system.");
             return user;
 
-          default;
+          default:
             System.out.println("Invalid choice!");
             continue;
         }
@@ -75,37 +75,38 @@ public class TTK_Main{
   public static void main(String[] args){
     TTK_User currentUser = null;
 
-    while(true){
-
-      if(currentUser == null){
-        currentUser = createOrLogin();
-      }
-
-      welcomeMessage(currentUser);
-
-      currentUser = Logout(currentUser);
-
-      if(currentUser == null){
-        System.out.println("This user has been logged out!");
-
-      }else{
-        System.out.println("This user is still logged in!");
-      }
-
       while(true){
-        System.out.println("Do you want to terminate the program (and lose all your users)? Y/N");
-        Scanner scan = new Scanner(System.in);
-        String choice = scan.nextLine();
 
-        if (choice.equals("Y")) {
-          return;
+        if(currentUser == null){
+          currentUser = createOrLogin();
+        }
 
-        } else if(choice.equals("N")){
-          break;
+        welcomeMessage(currentUser);
 
-        } else {
-          System.out.println("Invalid choice!");
+        currentUser = Logout(currentUser);
+
+        if(currentUser == null){
+          System.out.println("This user has been logged out!");
+
+        }else{
+          System.out.println("This user is still logged in!");
+        }
+
+        while(true){
+          System.out.println("Do you want to terminate the program (and lose all your users)? Y/N");
+          Scanner scan = new Scanner(System.in);
+          String choice = scan.nextLine();
+
+          if (choice.equals("Y")) {
+            return;
+
+          } else if(choice.equals("N")){
+            break;
+
+          } else {
+            System.out.println("Invalid choice!");
+        }
       }
-    }
+    } //while
   } //main
 } //class
