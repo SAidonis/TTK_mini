@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
-public class TTK_Mini {
-
+public class TTK_Main{
   public static TTK_User createOrLogin(){
     Scanner scan = new Scanner(System.in);
 
@@ -47,6 +46,7 @@ public class TTK_Mini {
 
   public static void welcomeMessage(TTK_User user){
     System.out.println("Welcome " + user.getUsername() + "!");
+
   }
 
   public static TTK_User Logout(TTK_User user){
