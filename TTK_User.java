@@ -6,25 +6,17 @@ public class TTK_User{
   private String username;
   List<String> userList = new ArrayList<String>();
 
-  public TTK_User(String u, String p){
-    username = u;
-    password = p;
+  public TTK_User(String username, String password){
+    this.username = username;
+    this.password = password;
   }
 
   public String getUsername(){
-    return this.username;
+    return username;
   }
 
   public String getPassword(){
-    return this.username;
-  }
-
-  public void setUsername(TTK_User user, String u){
-    user.name = u;
-  }
-
-  public void setPassword(TTK_User pass, String p){
-    user.pass = p;
+    return password;
   }
 
 }
