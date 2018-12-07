@@ -31,7 +31,7 @@ public class TTK_Main{
             continue;
           }
         case "2":
-          user = Create.tryCreate(username, password);
+          user = TTK_Create.Create(username, password);
 
           if(user == null){
             System.out.println("Failed to create user!");
@@ -50,7 +50,7 @@ public class TTK_Main{
   }
 
   public static TTK_User Logout(TTK_User user){
-    Scanner scan = new scanner(System.in);
+    Scanner scan = new Scanner(System.in);
 
       while(true){
         System.out.println("Do you want to logout? Y/N");

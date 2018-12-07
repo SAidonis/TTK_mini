@@ -2,13 +2,13 @@ public class TTK_Create {
 
 	public static TTK_User Create(String username, String password) {
 
-		for(TTK_User user : User.userList){
-			if(user.getUsername().equals(username)); //Checks if the user exist
+		for(TTK_User user : TTK_UserStorage.userList){
+			if(user.getUsername().equals(username));
 			return null;
 		}
 
 		TTK_User user = new TTK_User(username, password);
-		User.userList.add(user); //Adding nwe user
+		TTK_UserStorage.userList.add(user);
 		return user;
 	  }
 
