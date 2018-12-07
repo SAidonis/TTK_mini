@@ -1,10 +1,6 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class TTK_User{
-  private String password;
   private String username;
-  List<String> userList = new ArrayList<String>();
+  private String password;
 
   public TTK_User(String username, String password){
     this.username = username;
