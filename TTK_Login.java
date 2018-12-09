@@ -4,16 +4,22 @@ public class TTK_Login {
   user.getUsername();
   user.getPassword();
 
-private boolean verifyUser(String username, String password){
+  private boolean verifyUser(String username, String password){
 
-user.getUsername == username;
-user.getPassword == password;
+  String Username;
+  String Password;
 
-if(username.equals("Ramisa") && (password.equals("Tahsin"))){  //bestämt username och password
+  Password = "Ramisa";
+  Username = "Tahsin";
+
+  user.getUsername == username;
+  user.getPassword == password;
+
+  if(username.equals("Ramisa") && (password.equals("Tahsin"))){  //bestämt username och password
   System.out.println("Welcome");
-}
-else {
+  }
+  else {
   System.out.println("Failed to Login");
-}
+  }
 
 }
