@@ -24,7 +24,7 @@ public class TTK_Main{
       TTK_User user;
       switch(choice){
         case "1":
-          user = Login.tryLogin(username, password);
+          user = TTK_Login.tryLogin(username, password);
 
           if(user == null){
             System.out.println("Failed to login!");
